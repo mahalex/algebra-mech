@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{ccfonts,eulervm,microtype}
+\renewcommand{\bfdefault}{sbc}
+
+\usepackage[margin=0.7in,bmargin=1.2in]{geometry}
+\usepackage{multicol}
+
+\usepackage{hyperref}
+
+\usepackage{mathabx}
+
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\pagestyle{plain}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[subsection]
+\newtheorem{lemma}[theorem]{Лемма}
+\newtheorem{proposition}[theorem]{Предложение}
+\newtheorem{exercise}[theorem]{Упражнение}
+\newtheorem{corollary}[theorem]{Следствие}
+
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Пример}
+\newtheorem{examples}[theorem]{Примеры}
+\newtheorem{remark}[theorem]{Замечание}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Определение}
+
+
+\renewcommand{\emptyset}{\varnothing}
+\newcommand\mbZ{\mathbb Z}
+\newcommand\ph{\varphi}
+\newcommand\trleq{\trianglelefteq}
+\newcommand\isom{\cong}
+%\def\l{\lambda}
+%\def\m{\mu}
+\newcommand\la{\langle}
+\newcommand\ra{\rangle}
+\newcommand\mb{\mathbb}
+\newcommand\mc{\mathcal}
+\newcommand\divs{\,\lower.4ex\vdots\,}
+\newcommand\ol{\overline}
+\newcommand\eps{\varepsilon}
+
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Ree}{Re}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\mmod}{mod}
+\DeclareMathOperator{\cchar}{char}
+
+\DeclareMathOperator{\logn}{ln}
+\DeclareMathOperator{\Logn}{Ln}
+\DeclareMathOperator{\Frac}{Frac}
+
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\pr}{pr}
+
+\DeclareMathOperator{\pow}{pow}
+%\DeclareMathOperator{\deg}{deg}
+\DeclareMathOperator{\Fix}{Fix}
+
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\const}{const}
+
+
+\newcommand\tld{\widetilde}
+\newcommand\rsa{\rightsquigarrow}
+\newcommand\mbC{\mathbb C}
+\newcommand\mbR{\mathbb R}
+
+\newcommand\literature[1]{{\small{\sc Литература}: #1}}
+
+\newcommand\dfn[1]{{\bf #1}}
+
+\makeindex
+
+%\includeonly{multilinear}
+
+\begin{document}
+
+\title{Алгебра и теория чисел\footnote{Конспект
+    лекций для механиков, 2014--2015 учебный год; предварительная
+    версия}}
+\author{Александр Лузгарев}
+\date{}
+
+\maketitle
+
+\tableofcontents
+
+\vfill
+
+В начале каждого подраздела указана вспомогательная
+литература. Обозначения:
+
+\begin{itemize}
+\item {}[F] Д. К. Фаддеев, {\it Лекции по алгебре}, М.: Наука, 1984.
+\item {}[K1] А. И. Кострикин, {\it Введение в алгебру. Часть I. Основы
+    алгебры}, 3-е изд. --- М.: ФИЗМАТЛИТ, 2004.
+\item {}[K2] А. И. Кострикин, {\it Введение в алгебру. Часть II. Линейная
+    алгебра}, М.: ФИЗМАТЛИТ, 2000.
+\item {}[K3] А. И. Кострикин, {\it Введение в алгебру. Часть
+    III. Основные структуры}, М.: ФИЗ\-МАТЛИТ, 2004.
+\item {}[vdW] Б. Л. ван дер Варден, {\it Алгебра}, М.: Мир, 1976.
+\item {}[Bog] О. В. Богопольский, {\it Введение в теорию групп},
+  Москва--Ижевск: Институт компьютерных исследований, 2002.
+\item {}[KM] А. И. Кострикин, Ю. И. Манин, {\it Линейная алгебра и
+    геометрия}, М.: Наука, 1986.
+\item {}[V] И. М. Виноградов, {\it Основы теории чисел}, М., 1952.
+\item {}[B] А. А. Бухштаб, {\it Теория чисел}, М.: Просвещение, 1966.
+\end{itemize}
+% И. М. Гельфанд, Лекции по линейной алгебре.
+% Халмош, Конечномерные векторные пространства.
+
+
+\vfill\eject
+
+\include{set-theory}
+\include{number-theory}
+\include{complex-numbers}
+\include{polynomials}
+\include{linear-algebra}
+\include{vector-spaces}
+\include{linear-maps}
+\include{jordan-form}
+\include{euclidean-spaces}
+\include{group-theory}
+\include{multilinear}
+
+\clearpage
+\addcontentsline{toc}{section}{\indexname}
+\input{algebra.ind}
+
+\end{document}
+
+% группа углов как пример фактор-группы
+
+
