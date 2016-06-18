@@ -750,7 +750,7 @@ $$
 Применяя к этому равенству отображение $\ph$ и пользуясь его линейностью, получаем
 \begin{align*}
 \ph(v) &= \ph(e_1 B(e_1,v) + e_2 B(e_2, v) + \dots + e_n B(e_n,v)) \\
-&= \ph(e_1)B(e_1,v) + \ph(e_2)B(e_2,v) + \dots + \ph(e_n B(e_n) \\
+&= \ph(e_1)B(e_1,v) + \ph(e_2)B(e_2,v) + \dots + \ph(e_n)B(e_n) \\
 &= B(e_1\overline{\ph(e_1)} + e_2\overline{\ph(e_2)} + \dots + e_n\overline{\ph(e_n)},v).
 \end{align*}
 Заметим, что первый аргумент полученного выражения не зависит от $v$.
@@ -830,7 +830,7 @@ $U\leq V$~--- конечномерное подпространство в $V$. 
 \begin{enumerate}
 \item\label{num:orth-comp-prop-findim-1} $V = U\oplus U^\perp$;
 \item если, кроме того, $V$ конечномерно, то $\dim (U^\perp) = \dim (V) - \dim (U)$;
-\item $(U\perp)^\perp = U$.
+\item $(U^\perp)^\perp = U$.
 \end{enumerate}
 \end{proposition}
 \begin{proof}
@@ -927,7 +927,7 @@ $U\leq V$~--- конечномерное подпространство, $v\in V
 $w_1+w_2\in U^\perp$. По определению
 $\pr_U(v_1) = u_1$, $\pr_U(v_2) = u_2$ и
 $\pr_U(v_1+v_2) = u_1 + u_2 = \pr_U(v_1) + \pr_U(v_2)$.
-Мы показали аддитивность отображения $\pr_U$. Если $v\in U$
+Мы показали аддитивность отображения $\pr_U$. Если $v\in V$
 и $v = u + w$ для $u\in U$, $w\in U^\perp$, то
 $v\lambda = u\lambda + w\lambda$, откуда следует и однородность
 $\pr_U$.
@@ -1039,7 +1039,7 @@ $(\eta\circ\ph)^* = \ph^*\circ\eta^*$
 \begin{align*}
 B(v,(\ph+\psi)^*(v')) &= B'((\ph+\psi)(v),v') \\
 &= B'(\ph(v) + \psi(v),v') \\
-&= B'(\ph(v),v') + B(\psi(v),v') \\
+&= B'(\ph(v),v') + B'(\psi(v),v') \\
 &= B(v,\ph^*(v')) + B(v,\psi^*(v')) \\
 &= B(v,\ph^*(v')+\psi^*(v')),
 \end{align*}
